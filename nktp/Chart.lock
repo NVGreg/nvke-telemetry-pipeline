@@ -4,7 +4,7 @@ dependencies:
   version: 0.27.0
 - name: prometheus-node-exporter
   repository: https://prometheus-community.github.io/helm-charts
-  version: 4.56.1
+  version: 5.0.0
 - name: metrics-server
   repository: https://kubernetes-sigs.github.io/metrics-server/
   version: 3.13.1
@@ -14,5 +14,5 @@ dependencies:
 - name: nvcb
   repository: file://../nvcb/chart
   version: 0.1.0
-digest: sha256:87d578b3c31a1f552a55a5c0bac2dff91bff79cdbd59c85d004191c0799833ae
-generated: "2026-11-09T14:15:22.589752-08:00"
+digest: sha256:633084e71f328fec519a50562012de45253d71e67b034ab22fc6491db1e0afd9
+generated: "2026-11-09T22:53:18.701878041Z"
