@@ -2067,6 +2067,20 @@ matches the snapshot with default values:
     spec:
       podMetricsEndpoints:
         - honorLabels: true
+          metricRelabelings:
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);(.+)
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret_name
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);.+
+              replacement: ""
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret
           port: http-metrics
         - port: telemetry
       selector:
@@ -2088,6 +2102,20 @@ matches the snapshot with default values:
     spec:
       podMetricsEndpoints:
         - honorLabels: true
+          metricRelabelings:
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);(.+)
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret_name
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);.+
+              replacement: ""
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret
           port: http-metrics
         - port: telemetry
       selector:
@@ -2109,6 +2137,20 @@ matches the snapshot with default values:
     spec:
       podMetricsEndpoints:
         - honorLabels: true
+          metricRelabelings:
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);(.+)
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret_name
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);.+
+              replacement: ""
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret
           port: http-metrics
         - port: telemetry
       selector:
@@ -2129,6 +2171,20 @@ matches the snapshot with default values:
     spec:
       podMetricsEndpoints:
         - honorLabels: true
+          metricRelabelings:
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);(.+)
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret_name
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);.+
+              replacement: ""
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret
           port: http-metrics
         - port: telemetry
       selector:
@@ -2150,6 +2206,20 @@ matches the snapshot with default values:
     spec:
       podMetricsEndpoints:
         - honorLabels: true
+          metricRelabelings:
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);(.+)
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret_name
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);.+
+              replacement: ""
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret
           port: http-metrics
         - port: telemetry
       selector:
@@ -2171,6 +2241,20 @@ matches the snapshot with default values:
     spec:
       podMetricsEndpoints:
         - honorLabels: true
+          metricRelabelings:
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);(.+)
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret_name
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);.+
+              replacement: ""
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret
           port: http-metrics
         - port: telemetry
       selector:
@@ -2192,6 +2276,20 @@ matches the snapshot with default values:
     spec:
       podMetricsEndpoints:
         - honorLabels: true
+          metricRelabelings:
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);(.+)
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret_name
+            - action: replace
+              regex: kube_(?:secret_.+|ingress_tls);.+
+              replacement: ""
+              sourceLabels:
+                - __name__
+                - secret
+              targetLabel: secret
           port: http-metrics
         - port: telemetry
       selector:

@@ -20,5 +20,17 @@ spec:
     - port: http-metrics
       # Preserve the namespace and Pod labels of the objects described by KSM.
       honorLabels: true
+      # Rename KSM's secret object-name label on kube_secret_* and kube_ingress_tls
+      # so credential redaction does not mask it.
+      metricRelabelings:
+        - sourceLabels: [__name__, secret]
+          regex: kube_(?:secret_.+|ingress_tls);(.+)
+          targetLabel: secret_name
+          action: replace
+        - sourceLabels: [__name__, secret]
+          regex: kube_(?:secret_.+|ingress_tls);.+
+          targetLabel: secret
+          replacement: ""
+          action: replace
     - port: telemetry
 {{- end }}
